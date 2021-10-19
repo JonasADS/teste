@@ -1,0 +1,68 @@
+.banner {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+        url("../images/banner.png");
+    height: 400px;
+    color: #344966;
+    position: relative;
+    background-size: cover;
+}
+
+.banner-octo {
+    background-color: #e3d83b;
+    filter: opacity(.7);
+    height: 400px;
+    width: 600px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+.banner-text h2 {
+    font-size: 2.5rem;
+}
+
+.valores, .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.cards {
+    background-color: #5c7457;
+}
+
+.cards__card {
+    width: 240px;
+    border-radius: 4px;
+}
+
+.valores__card-imagem {
+    width: 150px;
+}
+
+.cards__card-imagem img, .valores__card-imagem img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.valores__card-texto {
+    text-align: center;
+}
+
+.cards__card-texto {
+    padding: 10px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.cards__card-texto p{
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 0.8rem;
+}

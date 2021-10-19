@@ -1,0 +1,51 @@
+footer {
+    padding: 5rem;
+    background-color: #344966;
+    color: #f1f1f1;
+}
+
+footer .heavy {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer .light {
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+
+footer .footer-div{
+    margin: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.footer-container img {
+    width: 25px;
+    /* height: 50px; */
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icons div {
+    margin: 0 10px;
+}
+
+.footer-text-right {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+footer span {
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-right: 50px;
+}

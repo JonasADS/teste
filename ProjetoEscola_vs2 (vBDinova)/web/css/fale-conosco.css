@@ -1,0 +1,57 @@
+.fale-conosco {
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left div {
+    margin-bottom: 10px;
+}
+
+.left {
+    width: 60%;
+    padding-right: 50px;
+}
+
+.right {
+    width: 40%;
+}
+
+.medium-size {
+    display: flex;
+    justify-content: space-between;
+}
+
+.medium-size div{
+    width: 49%;
+}
+
+.medium-size div input, select, .max-size, textarea{
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-submit {
+    padding: 2px 20px;
+}
+
+.right div {
+    margin: 100px 0 100px 50px;
+}
+
+.right div h3 {
+    font-size: 1.3rem;
+}
+
+.bottom p {
+    font-size: 0.8rem;
+}
+
+.bottom p:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}

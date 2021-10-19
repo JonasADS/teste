@@ -1,0 +1,94 @@
+.area-do-professor-titulo {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container-area-do-professor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.menu-lateral {
+    width: 30%;
+}
+
+.menu-lateral a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 0 20px 5px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.menu-lateral a.active {
+    background-color: #e98a15;
+    color: white;
+}
+
+.form-professor {
+    width: 70%;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    min-height: 257px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.col1,
+.col2 {
+    width: 100%;
+}
+
+.col1 select,
+.col1 input,
+.col2 select,
+.col2 input {
+    width: 100%;
+}
+
+.col1 {
+    padding-right: 10px;
+}
+
+.col2 {
+    padding-left: 10px;
+}
+
+.row-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-form-area-do-professor-nota,
+.btn-form-area-do-professor-falta {
+    padding: 2px 20px;
+}
+
+.none {
+    display: none;
+}
+
+.table-faltas {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.turma-faltas {
+    width: 200px;
+}
+
+.turma-faltas select{
+    width: 100%;
+}

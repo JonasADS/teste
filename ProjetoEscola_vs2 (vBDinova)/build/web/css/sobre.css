@@ -1,0 +1,32 @@
+section {
+    padding: 80px;
+}
+
+.sobre-container {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    padding: 50px;
+    width: 100%;
+}
+
+h2 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.text p {
+    text-align: justify;
+    padding: 50px 0;
+}
+
+.text h3, h2 {
+    font-size: 1.2rem;
+}
+
+.list {
+    padding-top: 50px;
+}
