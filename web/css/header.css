@@ -1,0 +1,54 @@
+header {
+    background-color: #344966;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.logo h1 a{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.escola {
+    font-family: 'Koh Santepheap', cursive;
+    font-size: 2rem;
+}
+
+.inova {
+    font-family: 'Ephesis', cursive;
+    font-size: 2rem;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;    
+}
+
+.menu li a{
+    color: #f1f1f1;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: .5s;
+}
+
+.menu li a:hover{
+    text-decoration: underline;
+}
+
+.area{
+    background-color: #e98a15;
+}
+
+.area:hover{
+    background-color: #ea8f1f;
+}
+
+.active {
+    text-decoration: underline;
+}

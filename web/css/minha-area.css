@@ -1,0 +1,46 @@
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.login-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%
+}
+
+.login-form form {
+    width: 60%;
+    max-width: 500px;
+}
+
+.login-form form input[type=text]
+,.login-form form input[type=password] {
+    width: 100%;
+    padding: 5px;
+}
+
+.form-password {
+    margin: 20px 0;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-submit a {
+    font-size: 0.7rem;
+}
+
+.form-submit input[type=submit] {
+    padding: 5px 20px;
+}
+
+.login-image {
+    height: 600px;
+}
