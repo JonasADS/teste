@@ -1,1 +1,1 @@
-web:  java $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=prod -jar target/*.jar
+web: java $JAVA_OPTS -jar api/target/MoneyCtrl-0.0.1.jar --server.port=$PORT
