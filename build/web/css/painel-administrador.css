@@ -69,6 +69,7 @@
 .btn-form-area-do-administrador-nota,
 .btn-form-area-do-administrador-falta {
     padding: 2px 20px;
+    margin-bottom: 40px;
 }
 
 .none {
@@ -93,4 +94,3 @@ th, td {
 .turma-faltas select{
     width: 100%;
 }
-

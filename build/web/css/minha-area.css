@@ -18,7 +18,8 @@
 }
 
 .login-form form input[type=text]
-,.login-form form input[type=password] {
+,.login-form form input[type=password]
+,.tipo-usuario {
     width: 100%;
     padding: 5px;
 }

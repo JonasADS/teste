@@ -2,6 +2,7 @@
 <%
 Connection con=null;  
 Statement stm=null;
+
 try
 {
     String serverName = "localhost:3306"; 
