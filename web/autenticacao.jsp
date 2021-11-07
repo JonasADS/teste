@@ -1,9 +1,3 @@
-<%-- 
-    Document   : autenticacao
-    Created on : 28/09/2021, 13:51:48
-    Author     : Matheus
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
@@ -13,9 +7,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        
-        
+             
         <% 
             Connection con=null;
             PreparedStatement pstm= null;
@@ -54,7 +46,7 @@
                  if(rs.next()){
                      {                    
                      session.setAttribute("nomeAl", rs.getString("nome"));
-                     response.sendRedirect("area-do-aluno.jsp");
+                     response.sendRedirect("area-do-aluno-notas.jsp");
                      }
                  }
                  
@@ -67,6 +59,7 @@
                 }
                 rs.close(); pstm.close(); con.close();
               }
+              
                 
                 //USUÁRIO PROFESSOR
                 if(request.getParameter("tipo_usuario").equals("2")){
@@ -84,7 +77,7 @@
                  if(rs.next()){
                      {                    
                      session.setAttribute("nomeP", rs.getString("nome"));
-                     response.sendRedirect("area-do-professor.jsp");
+                     response.sendRedirect("area-do-professor-notas.jsp");
                      }
                  }
                  
@@ -112,8 +105,8 @@
                  
                  if(rs.next()){
                      {                    
-                     session.setAttribute("nomeAdm", rs.getString("nome"));
-                     response.sendRedirect("painel-administrador.jsp");
+                     session.setAttribute("NomeAdm", rs.getString("nome"));
+                     response.sendRedirect("painel-administrador-cadastrar.jsp");
                      }
                  }
                  
@@ -127,16 +120,10 @@
                 rs.close(); pstm.close(); con.close();
               }
               
-              
               else if(request.getParameter("tipo_usuario").equals("")){
                     response.sendRedirect("minha-area.jsp?tipoIncorreto=Erro");
                 }
-
-
-            %>          
-
-
-            
+            %>                     
             }
     </body>
 </html>

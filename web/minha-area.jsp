@@ -10,24 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/minha-area.css">
     <title>Minha área</title>
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <h1><a href="index.html">Logo</a></h1>
-        </div>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.jsp">Sobre</a></li>
-            <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
-            <li><a href="minha-area.jsp" class="area">Minha área</a></li>
-        </ul>
         <style>
             .status{
                 color: red;
@@ -41,39 +30,68 @@
                 margin-bottom: 20px;
             }
         </style>
+</head>
+
+<body>
+        <%  
+            if(session.getAttribute("nomeAl")!=null){
+                response.sendRedirect("area-do-aluno-notas.jsp");
+            }
+            else if(session.getAttribute("nomeP")!=null){
+                response.sendRedirect("area-do-professor-notas.jsp");
+            }
+            else if(session.getAttribute("NomeAdm")!=null){
+                response.sendRedirect("painel-administrador-cadastrar.jsp");
+            }
+            else{%>
+            
+    <header>
+        <div class="logo">
+            <h1><a href="index.html"><span class="escola">Escola</span><span class="inova">Inova</span></a></h1>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.jsp">Sobre</a></li>
+            <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+            <li><a href="minha-area.jsp" class="area">Minha área</a></li>
+        </ul>
     </header>
+
 
     <section class="login-container">
         <div class="login-form">
 
             <form action="autenticacao.jsp" method="post">
-                
-        <% 
+         <% 
             String resp = request.getParameter("incorreto");
             String tipo_inc = request.getParameter("tipoIncorreto");
+            String semValores = request.getParameter("SemValores");
+            
 	         if (resp != null)
-		out.println("<div class=status> Usuário ou senha incorretos </div>");
+		out.println("<div class='status'> Usuário ou senha incorretos </div>");
+                 
                  else if(tipo_inc != null)
-                 out.println("<div class=status> Selecione o tipo de usuário</div>");
+                 out.println("<div class='status'> Selecione o tipo de usuário </div>");
+                 
+                 else if(semValores != null)
+                 out.println("<div class='status'>Informe os dados solicitados</div>");
         %>
-                <div class="form-password"> <!--Verificar classe-->
-                    <label for="tipo">login:</label><br>
-                    <select name="tipo_usuario" id="tipo">
+                <div>
+                    <label for="login">Login:</label><br>
+                    <input type="text" name="Login">
+                </div>
+                <div class="form-password">
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" name="entradaSenha">
+                </div>
+                <div class="form-password">
+                    <label for="usuario">Selecione sua área:</label><br>
+                    <select name="tipo_usuario" id="usuario" class="tipo-usuario">
                         <option value=""></option>
                         <option value="1">Aluno</option>
                         <option value="2">Professor</option>
                         <option value="3">Administrador</option>
                     </select>
-                   
-                </div>
-                
-                <div>
-                    <label for="login">login:</label><br>
-                    <input type="text" name="Login">
-                </div>
-                <div class="form-password">
-                    <label for="senha">senha:</label><br>
-                    <input type="password" name="entradaSenha">
                 </div>
                 <div class="form-submit">
                     <a href="#">esqueceu sua senha?</a>
@@ -115,6 +133,7 @@
         <span>LGPD</span>
         <span>cookie usage</span>
     </footer>
+       <%}%>
 </body>
 
 </html>

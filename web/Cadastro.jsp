@@ -36,13 +36,13 @@
                 int retorno = pstm.executeUpdate();
               
                 if (retorno > 0) {                    
-                    response.sendRedirect("painel-administrador.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
+                    response.sendRedirect("painel-administrador-cadastrar.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
                 } else {                    
-                    response.sendRedirect("painel-administrador.jsp?dadosErro=ERRO! Verifique os dados digitados");
+                    response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro=ERRO! Verifique os dados digitados");
                 }
             } catch (Exception ex) {
                 //out.print("Error: " + ex.getMessage());
-                response.sendRedirect("painel-administrador.jsp?dadosErro2=ERRO");
+                response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro2=ERRO");
             }
             finally { //parte finally, sempre será executada
                 if(stm!=null)stm.close();
@@ -69,18 +69,18 @@
                         int retorno = pstm.executeUpdate();
 
                         if (retorno > 0) {
-                            response.sendRedirect("painel-administrador.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
+                            response.sendRedirect("painel-administrador-cadastrar.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
                         } else {
-                            response.sendRedirect("painel-administrador.jsp?dadosErro=ERRO! Verifique os dados digitados");
+                            response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro=ERRO! Verifique os dados digitados");
                         }
                     }
                     else{
-                       response.sendRedirect("painel-administrador.jsp?dadosErro=ERRO! Verifique os dados digitados");
+                       response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro=ERRO! Verifique os dados digitados");
                     }
                 
             } catch (Exception ex) {
                 //out.print("Error: " + ex.getMessage());
-                response.sendRedirect("painel-administrador.jsp?dadosErro2=ERRO! Falha na conexão");
+                response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro2=ERRO! Falha na conexão");
             }
             finally { //parte finally, sempre será executada
                 if(stm!=null)stm.close();
@@ -106,21 +106,24 @@
                         int retorno = pstm.executeUpdate();
 
                         if (retorno > 0) {
-                            response.sendRedirect("painel-administrador.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
+                            response.sendRedirect("painel-administrador-cadastrar.jsp?dadosSuc=DADOS GRAVADOS COM SUCESSO");
                         } else {
-                            response.sendRedirect("painel-administrador.jsp?dadosErro=ERRO! Verifique os dados digitados");
+                            response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro=ERRO! Verifique os dados digitados");
                         }                    
             
                 
             } catch (Exception ex) {
                 //out.print("Error: " + ex.getMessage());
-                response.sendRedirect("painel-administrador.jsp?dadosErro2=ERRO! Falha na conexão");
+                response.sendRedirect("painel-administrador-cadastrar.jsp?dadosErro2=ERRO! Falha na conexão");
             }
             finally { //parte finally, sempre será executada
                 if(stm!=null)stm.close();
                 if(con!=null)con.close();                
             }
            }
+            else{
+             response.sendRedirect("painel-administrador-cadastrar.jsp");
+            }
           
         %>
         

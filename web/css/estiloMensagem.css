@@ -1,0 +1,10 @@
+        .sucesso{
+         color: green;
+         font-size: 15pt;
+         font-weight: bold;
+      }
+      .erro{
+         color: red;
+         font-size: 15pt;
+         font-weight: bold;
+      }
